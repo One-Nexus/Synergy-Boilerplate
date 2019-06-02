@@ -40,3 +40,12 @@ npm start
 Access the devlopment server in the browser (default port is 8080, so visit http://localhost:8080). Start looking through the sample module and theme code - make some changes and see them reflected in your browser instantly!
 
 To bundle your application, run `npm run build`. The application bundle will be created at `./dist/app.js`.
+
+---
+
+<a href="https://twitter.com/ESR360">
+    <img src="http://edmundreed.com/assets/images/twitter.gif?v=1" width="250px" />
+</a>
+<a href="https://github.com/ESR360">
+    <img src="http://edmundreed.com/assets/images/github.gif?v=1" width="250px" />
+</a>

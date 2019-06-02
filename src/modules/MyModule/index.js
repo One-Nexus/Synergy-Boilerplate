@@ -2,7 +2,7 @@ import interactions from './interactions';
 import layout from './layout';
 import config from './config';
 
-const MyModule = ({ title, content, dismiss, ...props }) => (
+const MyModule = ({ title, dismiss, ...props }) => (
     <Module { ...props }>
         <Component name='heading'>
             {title} {dismiss && <Component name='close' onClick={interactions.dismiss}>✖</Component>}
