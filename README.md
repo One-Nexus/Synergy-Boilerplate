@@ -3,17 +3,17 @@
 [![npm version](https://badge.fury.io/js/Synergy.svg)](https://badge.fury.io/js/Synergy)
 [![npm version](https://img.shields.io/npm/dm/synergy.svg)](https://badge.fury.io/js/Synergy)
 
-<img height="56px" src="http://www.onenexus.io/synergy/github-logo.png" />
+<a href="https://github.com/One-Nexus/Synergy">
+    <img height="56px" src="http://www.onenexus.io/synergy/github-logo.png" />
+</a>
 
 > Synergy is a framework for building modular, configurable and scalable UI components for React-DOM projects
 
-###### Features
+###### Boilerplate Features
 
-* Style elements using either [Sass](https://github.com/One-Nexus/Synergy/wiki/Using-Sass-With-Synergy) or [JavaScript](https://github.com/One-Nexus/Synergy/wiki/Styling-Modules#styling-a-module-with-javascript) ([learn more](https://github.com/One-Nexus/Synergy/wiki/Styling-Modules))
-* Make cosmetic UI updates to your app without modifying source code ([learn more](https://github.com/One-Nexus/Synergy/wiki/Module-Configuration#apply-cosmetic-css-via-configuration))
-* Easily configure modules and create themes for your app ([learn more](https://github.com/One-Nexus/Synergy/wiki/Themes))
-* Add UI interactions without requiring class components, hooks or state ([learn more](https://github.com/One-Nexus/Synergy/wiki/Interactions))
-* Everything you need to create component libraries/UI styleguides
+* Includes React, ReactDOM and the Synergy framework
+* Includes Babel transpilation
+* Easy dev environment with webpack-dev-server and hot-reloading
 
 ## Setup
 

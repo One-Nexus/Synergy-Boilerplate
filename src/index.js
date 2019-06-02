@@ -1,8 +1,12 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
 import '@onenexus/synergy';
 import * as modules from './modules';
 import theme from './themes/myTheme';
 
-const App = ({ modules, theme }) => {
+Object.assign(window, { React, ReactDOM });
+
+const App = () => {
     Synergy.theme(modules, theme);
 
     return (
@@ -17,8 +21,6 @@ const App = ({ modules, theme }) => {
         </React.Fragment>
     )
 }
-
-App.defaultProps = { theme, modules };
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

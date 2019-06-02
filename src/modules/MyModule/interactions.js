@@ -1,3 +1,3 @@
 export default {
-    dismiss: event => event.target.parent(MyModule.defaultProps.name).addModifier('hidden')
+    dismiss: event => event.target.parentModule().addModifier('hidden')
 }
