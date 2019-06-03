@@ -1,6 +1,5 @@
 export default (theme) => ({
-    gutter: '1em',
-
+    'gutter': '1em',
     'font-family': 'sans-serif',
 
     heading: {
