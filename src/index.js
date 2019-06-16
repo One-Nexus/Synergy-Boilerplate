@@ -7,20 +7,33 @@ import theme from './themes/myTheme';
 Object.assign(window, { React, ReactDOM });
 
 const App = () => {
-    Synergy.theme(modules, theme);
+  Synergy.theme(modules, theme);
 
-    return (
-        <React.Fragment>
-            <MyModule title='Title'>
-                Lorem ipsum dolor sit amet
-            </MyModule>
+  return (
+    <React.Fragment>
+      <Group>
+        <MyModule title='Title'>
+          Lorem ipsum dolor sit amet
+        </MyModule>
 
-            <MyModule title='Title' highlight dismiss>
-                Click the ✖ to dismiss panel
-            </MyModule> 
-        </React.Fragment>
-    )
-}
+        <MyModule title='Title' highlight dismiss>
+          Click the ✖ to dismiss panel
+        </MyModule>
+      </Group>
+
+      <Accordion panels={[
+        {
+          heading: 'accordion title 1 (click me)',
+          content: 'lorem ipsum'
+        },
+        {
+          heading: 'accordion title 2 (click me)',
+          content: <p>foo bar</p>
+        }
+      ]} />
+    </React.Fragment>
+  );
+};
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

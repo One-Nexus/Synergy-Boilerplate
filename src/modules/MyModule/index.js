@@ -1,16 +1,19 @@
-import interactions from './interactions';
 import layout from './layout';
 import config from './config';
 
-const MyModule = ({ title, dismiss, ...props }) => (
-    <Module { ...props }>
-        <Component name='heading'>
-            {title} {dismiss && <Component name='close' onClick={interactions.dismiss}>✖</Component>}
-        </Component>
+const MyModule = ({ title, dismiss, ...props }) => {
+  const [isDismissed, setDismiss] = React.useState(false);
 
-        <Component name='content'>{props.children}</Component>
+  return (
+    <Module { ...props } isDismissed={isDismissed}>
+      <Component name='heading'>
+        {title} {dismiss && <Component name='close' onClick={() => setDismiss(true)}>✖</Component>}
+      </Component>
+
+      <Component name='content'>{props.children}</Component>
     </Module>
-);
+  );
+};
 
 MyModule.defaultProps = { name: 'MyModule' };
 
