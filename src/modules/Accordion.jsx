@@ -1,42 +1,36 @@
 import React, { useState } from 'react';
 
-const styles = {
+const styles = ({ state, context }) => ({
   'font-family': 'sans-serif',
 
-  panel: panel => ([
-    {
-      condition: () => panel.is('open'),
-      styles: {
-        heading: {
-          'background': '#00FFB2',
-          'color': '#FFFFFF'
-        }
-      }
-    }
-  ]),
+  heading: ({ context }) => ({
+    backgroundColor: '#1E90FF',
+    color: '#005A9C',
+    padding: '1em',
+    cursor: 'pointer',
+    
+    ...(context.open && {
+      backgroundColor: '#00FFB2',
+      color: '#FFFFFF'
+    }),
 
-  heading: {
-    'background': '#1E90FF',
-    'color': '#005A9C',
-    'padding': '1em',
-    'cursor': 'pointer',
     ':hover': {
-      'background': '#01BFFF',
-      'color': '#FFFFFF'
+      backgroundColor: '#01BFFF',
+      color: '#FFFFFF'
     }
-  },
+  }),
 
-  content: content => ({
-    'padding': '1em',
-    'color': '#444444',
-    'display': content.parent('panel').is('open') ? 'block' : 'none'
+  content: ({ context }) => ({
+    padding: '1em',
+    color: '#444444',
+    display: context.open ? 'block' : 'none'
   })
-};
+});
 
-const Accordion = ({ panels }) => (
-  <Module name='accordion' styles={styles}>
+const Accordion = ({ panels, ...props }) => (
+  <Module name='accordion' styles={styles} { ...props }>
     {panels.map(({ heading, content }) => {
-      const [isOpen, toggle] = useState(false);
+      const [isOpen, toggle] = useState(true);
 
       return (
         <Component name='panel' open={isOpen}>
@@ -46,6 +40,6 @@ const Accordion = ({ panels }) => (
       )
     })}
   </Module>
-);
+)
 
 export default Accordion;

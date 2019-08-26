@@ -1,7 +1,8 @@
-export default (element, config) => {
+export default ({ element, config, state }) => {
   const layout = {
     'display': 'inline-block',
     'width': `calc(50vw - ${config.gutter})`,
+    'margin-left': !state.isFirstChild ? config.gutter : 0,
 
     'modifier(isDismissed)': {
       'display': 'none'
@@ -16,10 +17,6 @@ export default (element, config) => {
       'float': 'right',
       'cursor': 'pointer'
     },
-
-    nextSibling: [element.nextSibling, {
-      'margin-left': config.gutter
-    }],
 
     group: {
       'margin-bottom': config.gutter

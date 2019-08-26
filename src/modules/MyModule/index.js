@@ -1,4 +1,4 @@
-import layout from './layout';
+import styles from './styles';
 import config from './config';
 
 const MyModule = ({ title, dismiss, ...props }) => {
@@ -13,8 +13,8 @@ const MyModule = ({ title, dismiss, ...props }) => {
       <Component name='content'>{props.children}</Component>
     </Module>
   );
-};
+}
 
-MyModule.defaultProps = { name: 'MyModule' };
+MyModule.defaultProps = { name: 'MyModule' }
 
-export default Object.assign(MyModule, { layout, config });
+export default Object.assign(MyModule, { styles, config });
