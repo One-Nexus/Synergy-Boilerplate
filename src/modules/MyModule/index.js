@@ -2,11 +2,11 @@ import styles from './styles';
 import config from './config';
 
 const MyModule = ({ title, dismiss, ...props }) => {
-  const [isDismissed, setDismiss] = React.useState(false);
+  const [isDismissed, setDismiss] = useState(false);
 
   return (
-    <Module { ...props } isDismissed={isDismissed}>
-      <Component name='heading'>
+    <Module isDismissed={isDismissed} {...props}>
+      <Component name='title'>
         {title} {dismiss && <Component name='close' onClick={() => setDismiss(true)}>✖</Component>}
       </Component>
 

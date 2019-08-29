@@ -47,6 +47,10 @@ To bundle your application, run `npm run build`. The application bundle will be 
 
 This boilerplate provides 2 sample modules to get started with, [`MyModule`](https://github.com/One-Nexus/Synergy-Boilerplate/tree/master/src/modules/MyModule) which is split into multiple files, and [`Accordion`](https://github.com/One-Nexus/Synergy-Boilerplate/blob/master/src/modules/Accordion.jsx), which exists as a single file. This is so you can get a feel for the two most ssignificant ways to construct modules so you can decide which you prefer.
 
+### Sample Theme
+
+This boilerplate comes with a [theme](https://github.com/One-Nexus/Synergy-Boilerplate/blob/master/src/themes/myTheme.js) preloaded where you can find custom theme-level styles for `MyModule`. 
+
 ---
 
 <a href="https://twitter.com/ESR360">

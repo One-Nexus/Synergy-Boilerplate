@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-
-const styles = ({ state, context }) => ({
+const styles = () => ({
   'font-family': 'sans-serif',
 
   heading: ({ context }) => ({
@@ -9,7 +7,7 @@ const styles = ({ state, context }) => ({
     padding: '1em',
     cursor: 'pointer',
     
-    ...(context.open && {
+    ...(context.panel.open && {
       backgroundColor: '#00FFB2',
       color: '#FFFFFF'
     }),
@@ -23,7 +21,7 @@ const styles = ({ state, context }) => ({
   content: ({ context }) => ({
     padding: '1em',
     color: '#444444',
-    display: context.open ? 'block' : 'none'
+    display: context.panel.open ? 'block' : 'none'
   })
 });
 
@@ -40,6 +38,6 @@ const Accordion = ({ panels, ...props }) => (
       )
     })}
   </Module>
-)
+);
 
 export default Accordion;

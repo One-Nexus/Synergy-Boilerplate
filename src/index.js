@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-// import '@onenexus/synergy';
-import '../../Synergy/dist/synergy';
+import '@onenexus/synergy';
 import * as modules from './modules';
 import theme from './themes/myTheme';
 
-Object.assign(window, { React, ReactDOM });
+Object.assign(window, { React, ReactDOM, useState });
 
 const App = () => {
-  Synergy.init({ modules, theme });
+  Synergy.init({ modules, theme, handleConfig: true });
 
   return (
     <React.Fragment>
@@ -22,14 +21,14 @@ const App = () => {
         </MyModule>
       </Group>
 
-      <Accordion fizz panels={[
+      <Accordion panels={[
         {
           heading: 'accordion title 1 (click me)',
           content: 'lorem ipsum'
         },
         {
           heading: 'accordion title 2 (click me)',
-          content: <p>foo bar</p>
+          content: <span>foo bar</span>
         }
       ]} />
     </React.Fragment>
