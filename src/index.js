@@ -7,7 +7,7 @@ import theme from './themes/myTheme';
 Object.assign(window, { React, ReactDOM, useState });
 
 const App = () => {
-  Synergy.init({ modules, theme, handleConfig: true });
+  Synergy.init({ modules, theme });
 
   return (
     <React.Fragment>
