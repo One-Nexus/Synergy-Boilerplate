@@ -1,8 +1,14 @@
-export default ({ config, state }) => {
+export default ({ theme, config, state }) => {
   const layout = {
-    'display': 'inline-block',
-    'width': `calc(50vw - ${config.gutter})`,
-    'margin-left': !state.isFirstChild ? config.gutter : 0,
+    ...(window.matchMedia(`(min-width: ${theme.breakpoints.small}`).matches ? {
+      // styles for larger screens
+      'display': 'inline-block',
+      'width': `calc(50vw - ${config.gutter})`,
+      'margin-left': state.isLastChild ? config.gutter : 0
+    } : {
+      // styles for smaller screens
+      'margin-bottom': state.isLastChild ? 0 : config.gutter
+    }),
 
     ...(state.isDismissed && {
       'display': 'none'

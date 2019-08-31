@@ -1,5 +1,5 @@
 const styles = () => ({
-  'font-family': 'sans-serif',
+  fontFamily: 'sans-serif',
 
   heading: ({ context }) => ({
     backgroundColor: '#1E90FF',
