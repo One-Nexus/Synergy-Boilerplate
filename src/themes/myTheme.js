@@ -1,4 +1,4 @@
-export default (theme) => ({
+export default {
   colors: {
     primary: 'dodgerblue',
     secondary: 'deepskyblue',
@@ -14,10 +14,10 @@ export default (theme) => ({
     MyModule: {
       title: {
         'with-highlight': {
-          'background-color': () => theme.colors.tertiary,
-          'border-color': () => theme.colors.quaternary
+          'background-color': theme => theme.colors.tertiary,
+          'border-color': theme => theme.colors.quaternary
         }
       }
     }
   }
-});
+}

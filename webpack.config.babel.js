@@ -7,7 +7,6 @@ export default () => ({
   output: {
     path: path.resolve(__dirname, 'dist/'),
     filename: 'app.js',
-    publicPath: '/',
     libraryTarget: 'umd'
   },
 
@@ -16,7 +15,6 @@ export default () => ({
   ],
 
   devServer: {
-    contentBase: './',
     hot: true
   },
 

@@ -14,13 +14,12 @@
     "url": "https://github.com/One-Nexus/Synergy-Boilerplate.git"
   },
   "dependencies": {
-    "@onenexus/synergy": "4.0.0-beta.16",
+    "@onenexus/synergy": "4.0.0-beta.17",
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
-    "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",

@@ -6,16 +6,16 @@ const styles = () => ({
     color: '#005A9C',
     padding: '1em',
     cursor: 'pointer',
-    
-    ...(context.panel.open && {
-      backgroundColor: '#00FFB2',
-      color: '#FFFFFF'
-    }),
 
     ':hover': {
       backgroundColor: '#01BFFF',
       color: '#FFFFFF'
-    }
+    },
+    
+    ...(context.panel.open && {
+      backgroundColor: '#00FFB2',
+      color: '#FFFFFF'
+    })
   }),
 
   content: ({ context }) => ({
@@ -25,19 +25,21 @@ const styles = () => ({
   })
 });
 
-const Accordion = ({ panels, ...props }) => (
-  <Module name='accordion' styles={styles} { ...props }>
-    {panels.map(({ heading, content }) => {
-      const [isOpen, toggle] = useState(true);
+const Accordion = ({ panels, ...props }) => {
+  const [activeIndex, toggle] = useState(0);
 
-      return (
-        <Component name='panel' open={isOpen}>
-          <Component name='heading' content={heading} onClick={() => toggle(!isOpen)} />
+  return (
+    <Module name='accordion' styles={styles} { ...props }>
+      {panels.map(({ heading, content }, index) => (
+        <Component name='panel' open={index === activeIndex}>
+          <Component name='heading' onClick={() => toggle(index === activeIndex ? -1 : index)}>
+            {heading}
+          </Component>
           <Component name='content' content={content} />
         </Component>
-      )
-    })}
-  </Module>
-);
+      ))}
+    </Module>
+  );
+}
 
 export default Accordion;
