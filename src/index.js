@@ -1,15 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import Synergy from '@onenexus/synergy';
+import { Container } from '@onenexus/synergy';
 import * as modules from './modules';
 import theme from './themes/myTheme';
 
-Object.assign(window, { React, ReactDOM, useState });
-
-Synergy.init({ modules, theme });
-
 const App = () => (
-  <React.Fragment>
+  <Fragment>
     <Group>
       <MyModule title='Title'>
         Lorem ipsum dolor sit amet
@@ -30,9 +26,12 @@ const App = () => (
         content: <span>foo bar</span>
       }
     ]} />
-  </React.Fragment>
+  </Fragment>
 );
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
-module.hot.accept();
+ReactDOM.render(
+  <Container {...{ modules, theme, globals: { React, useState } }}>
+    <App />
+  </Container>, 
+  document.getElementById('root')
+);

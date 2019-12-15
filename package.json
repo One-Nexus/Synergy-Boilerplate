@@ -14,7 +14,7 @@
     "url": "https://github.com/One-Nexus/Synergy-Boilerplate.git"
   },
   "dependencies": {
-    "@onenexus/synergy": "4.0.0-beta.17",
+    "@onenexus/synergy": "4.0.0-beta.20",
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
   },
@@ -24,14 +24,9 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.5",
-    "react-hot-loader": "^4.8.8",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.4.1"
-  },
-  "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
   },
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.babel.js --mode development",
