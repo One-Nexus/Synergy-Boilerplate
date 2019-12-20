@@ -4,7 +4,18 @@
   "description": "A boilerplate for the Synergy framework designed to be simple starting point for Synergy projects",
   "main": "dist/app.js",
   "author": "(Edmund Reed)[http://twitter.com/esr360] <esr360@live.com>",
-  "homepage": "https://github.com/One-Nexus/Synergy-Boilerplate",
+  "keywords": [
+    "javascript",
+    "modular",
+    "web",
+    "ui",
+    "components",
+    "front-end",
+    "framework",
+    "boilerplate",
+    "react",
+    "synergy"
+  ],
   "bugs": {
     "url": "https://github.com/One-Nexus/Synergy-Boilerplate/issues"
   },
@@ -29,7 +40,7 @@
     "webpack-dev-server": "^3.4.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.babel.js --mode development",
+    "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production"
   }
 }
