@@ -1,13 +1,15 @@
 import React, { useState, Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import { Container } from '@onenexus/synergy';
+// import { Container } from '@onenexus/synergy';
+import { Container } from '../../Synergy/dist/synergy';
 import * as modules from './modules';
 import theme from './themes/myTheme';
+
 
 const App = () => (
   <Fragment>
     <Group>
-      <MyModule title='Title'>
+      <MyModule title='Title' config={theme => ({ color: theme.colors.secondary })}>
         Lorem ipsum dolor sit amet
       </MyModule>
 

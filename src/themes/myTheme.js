@@ -13,7 +13,7 @@ export default {
   modules: {
     MyModule: {
       title: {
-        'with-highlight': {
+        '$-is-highlight': {
           'background-color': theme => theme.colors.tertiary,
           'border-color': theme => theme.colors.quaternary
         }

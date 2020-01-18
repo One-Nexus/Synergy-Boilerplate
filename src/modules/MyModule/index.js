@@ -15,6 +15,6 @@ const MyModule = ({ title, dismiss, ...props }) => {
   );
 }
 
-MyModule.defaultProps = { name: 'MyModule' }
+MyModule.defaultProps = { name: 'MyModule', styles, config }
 
-export default Object.assign(MyModule, { styles, config });
+export default MyModule;

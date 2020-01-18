@@ -1,33 +1,28 @@
-export default ({ theme, config, state }) => {
-  const layout = {
-    ...(window.matchMedia(`(max-width: ${theme.breakpoints.small}`).matches ? {
-      // styles for smaller screens
-      'margin-bottom': state.isLastChild ? 0 : config.gutter
-    } : {
-      // styles for larger screens
-      'display': 'inline-block',
-      'width': `calc(50vw - ${config.gutter})`,
-      'margin-left': state.isLastChild ? config.gutter : 0
-    }),
+export default ({ theme, config, state }) => [config, {
+  'margin-bottom': config.gutter,
 
-    ...(state.isDismissed && {
-      'display': 'none'
-    }),
+  ...(Synergy.minWidth(theme.breakpoints.small) && {
+    'display': 'inline-block',
+    'width': `calc(50vw - ${config.gutter})`,
+    'margin-bottom': 0,
+    'margin-left': state.isFirstChild ? 0 : config.gutter
+  }),
 
-    content: {
-      'z-index': 0,
-      'margin-top': `-${config.content['border-width']}`
-    },
+  ...(state.isDismissed && {
+    'display': 'none'
+  }),
 
-    close: {
-      'float': 'right',
-      'cursor': 'pointer'
-    },
+  content: {
+    'z-index': 0,
+    'margin-top': `-${config.content['border-width']}`
+  },
 
-    group: {
-      'margin-bottom': config.gutter
-    }
+  close: {
+    'float': 'right',
+    'cursor': 'pointer'
+  },
+
+  group: {
+    'margin-bottom': config.gutter
   }
-
-  return [config, layout];
-}
+}];
