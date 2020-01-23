@@ -9,7 +9,7 @@ const MyModule = ({ title, dismiss, ...props }) => {
       <Component name='title'>
         {title} {dismiss && <Component name='close' onClick={() => setDismiss(true)}>✖</Component>}
       </Component>
-
+      
       <Component name='content'>{props.children}</Component>
     </Module>
   );

@@ -1,8 +1,6 @@
 export default () => ({
-  entry: './src/index.js',
-
   resolve: { 
-    extensions: ['.js', '.jsx', '.json'] 
+    extensions: ['.js', '.jsx', '.json']
   },
 
   module: {
