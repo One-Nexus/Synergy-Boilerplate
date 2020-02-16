@@ -25,9 +25,9 @@
     "url": "https://github.com/One-Nexus/Synergy-Boilerplate.git"
   },
   "dependencies": {
-    "@onenexus/synergy": "4.0.0-beta.23",
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "@onenexus/synergy": "4.0.0-beta.27",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",

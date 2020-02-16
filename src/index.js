@@ -33,5 +33,5 @@ ReactDOM.render(
   <Container {...{ modules, theme, globals: { React, useState } }}>
     <App />
   </Container>, 
-  document.getElementById('root')
+  document.getElementById('app')
 );

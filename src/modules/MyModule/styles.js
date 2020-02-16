@@ -8,7 +8,7 @@ export default ({ theme, config, state }) => [config, {
     'margin-left': state.isFirstChild ? 0 : config.gutter
   }),
 
-  ...(state.isDismissed && {
+  ...(state.dismissed && {
     'display': 'none'
   }),
 

@@ -26,13 +26,13 @@ const styles = () => ({
 });
 
 const Accordion = ({ panels, ...props }) => {
-  const [activeIndex, toggle] = useState(0);
+  const [current, toggle] = useState(0);
 
   return (
     <Module name='Accordion' styles={styles} { ...props }>
-      {panels.map(({ heading, content }, index) => (
-        <Component name='panel' open={index === activeIndex}>
-          <Component name='heading' onClick={() => toggle(index === activeIndex ? -1 : index)}>
+      {panels.map(({ heading, content }, i) => (
+        <Component name='panel' open={i === current}>
+          <Component name='heading' onClick={() => toggle(i === current ? -1 : i)}>
             {heading}
           </Component>
           <Component name='content' content={content} />
