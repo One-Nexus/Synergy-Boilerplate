@@ -15,7 +15,7 @@
 * Includes Babel transpilation
 * Easy dev environment with webpack-dev-server and hot-reloading
 
-> [View this boilerplate on CodeSandbox](https://codesandbox.io/s/7899m)
+> [View this boilerplate on CodeSandbox](https://codesandbox.io/s/synergy-boilerplate-7899m)
 
 ## Setup
 
